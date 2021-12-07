@@ -10,10 +10,10 @@ const Blog123 = require('./models/blog');
 var app = express();
 
 //connect to mongodb
-const dburl='mongodb+srv://tonytest:admin123@nodetutor.xsigh.mongodb.net/node-tuts';
-mongoose.connect(dburl, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => console.log("connect mongo db success"))
-  .catch(err => console.log(err));
+// const dburl='mongodb+srv://tonytest:admin123@nodetutor.xsigh.mongodb.net/node-tuts';
+// mongoose.connect(dburl, { useNewUrlParser: true, useUnifiedTopology: true })
+  // .then(result => console.log("connect mongo db success"))
+  // .catch(err => console.log(err));
 console.log(123);
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
@@ -39,10 +39,7 @@ app.use('/users', usersRouter);
 app.get('/add-blog', (req, res) => {
 	const dburl='mongodb+srv://tonytest:admin123@nodetutor.xsigh.mongodb.net/node-tuts';
    mongoose.connect(dburl, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => console.log("connect mongo db success"))
-  .catch(err => console.log(err));
-  
-  const blog = new Blog123({
+  .then(result => {  const blog = new Blog123({
     title: 'new blog 1207',
     snippet: 'about my new blog',
     body: 'more about my new blog'
@@ -54,7 +51,10 @@ app.get('/add-blog', (req, res) => {
     })
     .catch(err => {
       console.log(err);
-    });
+    });})
+  .catch(err => console.log(err));
+  
+
 });
 
 
