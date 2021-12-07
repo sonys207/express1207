@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+   
+  </head>
+  <body>
+
+	  <div class="notification"></div>
+	  
+ 
+	
+	 <%- include('./partials/headers.ejs') %>
+	
+    <!-- auth modals -->
+    <div class="auth open">
+      <div class="modal">
+        <h2>Login | <%= tonytest %></h2>
+        <form class="login">
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+		  <a href="/api/12345?text=tykeg"> new page</a>
+          <button>Login</button>
+          <p class="error"></p>
+        </form>
+	
+	    <img src="" class="imagetest" />
+        <div>No account? <a class="switch" href="/users">Register instead</a></div>
+      </div>
+    <!--  <div class="modal">
+        <h2>Register</h2>
+        <form class="register">
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <button>Register</button>
+          <p class="error"></p>
+        </form>
+        <div>Got an account? <a class="switch">Login instead</a></div>
+      </div>-->
+    </div>
+  
+    <!-- new request modal -->
+    <div class="new-request">
+      <div class="modal">
+        <h2>Request a Tutorial</h2>
+        <form>
+          <input type="text" name="request" placeholder="Request...">
+          <button>Submit Request</button>
+          <p class="error"></p>
+        </form>
+      </div>
+    </div>
+    
+    <header>
+      <nav>
+        <a class="add-request">add request</a>
+        <a class="sign-out">sign out</a>
+      </nav>
+    </header>
+
+   
+	
+ <!-- update the version number as needed -->
+  
+	<script src="/javascripts/auth.js"></script>
+  </body>
+</html>

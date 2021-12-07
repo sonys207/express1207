@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+   
+  </head>
+  <body>
+	
+	  <div class="notification"></div>
+    
+    <!-- auth modals -->
+    <div class="auth open">
+      <div class="modal">
+        <h2>Login</h2>
+        <form class="login">
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+		  <a href="/api/12345?text=tykeg"> new page</a>
+          <button>Login</button>
+          <p class="error"></p>
+        </form>
+	
+	    <img src="" class="imagetest" />
+        <div>No account? <a class="switch">Register instead</a></div>
+      </div>
+      <div class="modal">
+        <h2>Register</h2>
+        <form class="register">
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <button>Register</button>
+          <p class="error"></p>
+        </form>
+        <div>Got an account? <a class="switch">Login instead</a></div>
+      </div>
+    </div>
+  
+    <!-- new request modal -->
+    <div class="new-request">
+      <div class="modal">
+        <h2>Request a Tutorial</h2>
+        <form>
+          <input type="text" name="request" placeholder="Request...">
+          <button>Submit Request</button>
+          <p class="error"></p>
+        </form>
+      </div>
+    </div>
+    
+    <header>
+      <nav>
+        <a class="add-request">add request</a>
+        <a class="sign-out">sign out</a>
+      </nav>
+    </header>
+
+    <section class="content" id="app">
+      <h1>Tutorial Requests</h1>
+      <ul class="request-list"> 
+        <li v-for="request in requests">
+          <span class="text">{{ request.text }}</span>
+          <div>
+            <span class="votes">{{ request.upvotes }}</span>
+            <i class="material-icons upvote" onclick="alert(123);" ">arrow_upward</i>
+          </div>
+        </li>
+      </ul>
+    </section>
+	
+ <!-- update the version number as needed -->
+  
+	<script defer src="../public/javasript/auth.js"></script>
+  </body>
+</html>
