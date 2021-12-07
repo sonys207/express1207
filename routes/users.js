@@ -11,7 +11,7 @@ router.post('/', function(req, res, next) {
 router.get('/', function(req, res, next) {
 		console.log('12-1');
    // console.log(req.query.password);
-  res.render('users');
+  res.render('users',{userj:"tony1234"});
  // const blogArray=[
    // {title:'yoshi 1207',snippet:'zousifang'},
    // {title:'yo1206',snippet:'zousifang2'},
