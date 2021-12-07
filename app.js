@@ -37,6 +37,11 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 app.get('/add-blog', (req, res) => {
+	const dburl='mongodb+srv://tonytest:admin123@nodetutor.xsigh.mongodb.net/node-tuts';
+   mongoose.connect(dburl, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(result => console.log("connect mongo db success"))
+  .catch(err => console.log(err));
+  
   const blog = new Blog123({
     title: 'new blog 1207',
     snippet: 'about my new blog',
