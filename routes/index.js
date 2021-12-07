@@ -16,5 +16,6 @@ var homeController = require('../Controllers/indexControllers');
    // res.render('index',{tonytest:'1234567',blogs:blogArray});	 
  // });
  console.log(1207);
+  console.log(homeController.bike.brand);
 router.get('/', homeController.homepage_index);
 module.exports = router;
